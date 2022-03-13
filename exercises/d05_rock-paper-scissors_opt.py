@@ -17,35 +17,35 @@ while userInput == 'C':
     # 1. MỘT LƯỢT CHƠI
     # 1.1. PHẦN XỬ LÝ INPUT VÀO
     print("Mời bạn chọn: (3) Búa, (2) Kéo, (1) Bao")
-    userinput = int(input())
-    # print(type(userinput))
+    userInput = int(input())
+    # print(type(userInput))
     botinput = random.randint(1, 3)
     print('Người dùng chọn giá trị: {0}. Máy chọn giá trị: {1}'.format(
-        dict[userinput], dict[botinput]))
+        dict[userInput], dict[botinput]))
 
     # 1.2. LOGIC XỬ LÝ THẮNG THUA
     # -------------------------------------------------------------
     # 0. Trường hợp hoà
-    if (userinput == botinput):
+    if (userInput == botinput):
         print("Hoà")
 
     # -------------------------------------------------------------
     # 1. Hai trường hợp không nằm trong mẫu lớn hơn thì thắng (bé hơn thì thua)
     # Lưu ý 2 case này thì nhớ exit để thoát chương trình, không chạy if cuối cùng
-    elif (userinput == 1 and botinput == 3):
+    elif (userInput == 1 and botinput == 3):
         soLanThang += 1
-        print('{0} Thắng {1}'.format(dict[userinput], dict[botinput]))
+        print('{0} Thắng {1}'.format(dict[userInput], dict[botinput]))
 
-    elif (userinput == 3 and botinput == 1):
-        print('{0} Thua {1}'.format(dict[userinput], dict[botinput]))
+    elif (userInput == 3 and botinput == 1):
+        print('{0} Thua {1}'.format(dict[userInput], dict[botinput]))
 
     # -------------------------------------------------------------
     # 2. Trong trường hợp bình thường thì lớn hơn thắng, bé hơn thua
-    elif (userinput > botinput):
+    elif (userInput > botinput):
         soLanThang += 1
-        print('{0} Thắng {1}'.format(dict[userinput], dict[botinput]))
+        print('{0} Thắng {1}'.format(dict[userInput], dict[botinput]))
     else:
-        print('{0} Thua {1}'.format(dict[userinput], dict[botinput]))
+        print('{0} Thua {1}'.format(dict[userInput], dict[botinput]))
 
     # -------------------------------------------------------------
     # 2. HỎI NGƯỜI DÙNG TIẾP TỤC
