@@ -96,7 +96,7 @@ if (__name__ == '__main__'):
     hWord, hWordDict = initHiddenWordByPercent('beautiful', 0.6)
     # -------------------------------------------------------------
     # Phần logic lặp lại khi người dùng nhập vào 1 từ
-    guessingChar, idxArr = compareGuessingWithArr('v', hWordDict)
+    guessingChar, idxArr = compareGuessingWithArr('u', hWordDict)
     rebuildWord = rebuildHiddenWord(hWord, guessingChar, idxArr)
 
     print(idxArr, hWord, rebuildWord, hWordDict)
