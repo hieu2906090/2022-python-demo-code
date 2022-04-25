@@ -13,7 +13,7 @@ listToaDo = [(1, 2), (3, 4), (12, 35), (11, 77), (33, 56)]
 
 
 def khoangCachGiua2Diem(diemSo1, diemSo2):
-    diemSo1[0]  # --> 1
+    diemSo1[0][0]  # --> 1
     diemSo1[1]  # --> 2
     diemSo2[0]  # --> 3
     diemSo2[1]  # --> 4
@@ -23,14 +23,16 @@ def khoangCachGiua2Diem(diemSo1, diemSo2):
 
 def duyetQuaListToaDoDeTinhKhoangCach(listToaDo):
     listKhoangCach = []
+    doDaiMang = len(listToaDo)
+    for idx in range(0, doDaiMang):
+        for idy in range(idx+1, len(doDaiMang) + 1):
 
-    for (idx, toaDo) in enumerate(listToaDo):
-        print(idx, toaDo)
+            print(idx, listToaDo[idx])  # idx: 0 -> listToaDo[idx]: (1,2)
 
     return listKhoangCach
 
 
-def timSoLonNhat(danhSach):
+def timSoLonNhatNhoNhatTuDanhSach(danhSach):
     soLonNhat = 0
     soNhoNhat = danhSach[0]
     for item in danhSach:
@@ -41,8 +43,10 @@ def timSoLonNhat(danhSach):
     return soNhoNhat, soLonNhat
 
 
-duyetQuaListToaDoDeTinhKhoangCach(listToaDo)
-
+danhSach = duyetQuaListToaDoDeTinhKhoangCach(listToaDo)
+soNhoNhat, soLonNhat = timSoLonNhatNhoNhatTuDanhSach(danhSach)
+print('Khoảng cách lớn nhất: {0}. Khoảng cách nhỏ nhất: {1}'.format(
+    soLonNhat, soNhoNhat))
 # print(max(dsSo), min(dsSo))
 
 # print('Dia Chi Tuple La: ' + str(diaChi[0]))
