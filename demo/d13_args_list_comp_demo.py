@@ -1,8 +1,11 @@
-import math
 from random import randint
+import math
 
-# def testFunction(*kwargs):  # arguments == parameters
-#     print(kwargs)
+# def testFunc(par1, *args):
+#     print(par1, args)
+
+
+# testFunc(1, 2, 3)
 
 # List comprehension
 
@@ -18,6 +21,8 @@ def hamTinhTichPhanTrenI(i):
 # annonymous function (ngôn ngữ #) == lambda function (python)
 testArr = [(lambda i, ii: i*ii)(i, hamTinhTichPhanTrenI(i))
            for i in range(1, 100)]
+
+testArr = [randint(1, 10) for i in range(1, 100)]
 
 # first class function
 # testArr = [testFunc(i)

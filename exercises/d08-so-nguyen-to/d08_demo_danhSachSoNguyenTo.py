@@ -1,7 +1,10 @@
 # -------------------------------------------------------------
+from time import time
+
+
 def checkSoNguyenToV1(soCanCheck):
     isSoNguyenTo = True
-    for i in range(2, soCanCheck):
+    for i in range(2, round(soCanCheck/2)):
         if (soCanCheck % i == 0):
             isSoNguyenTo = False
             break
@@ -36,16 +39,27 @@ def checkSoNguyenTo(soCanCheck):
     return isSoNguyenTo
 
 
+def checkSoNguyenToNew(soCanCheck):
+    isSoNguyenTo = True
+    for i in range(2, round(soCanCheck/2)):
+        if (soCanCheck % i == 0):
+            isSoNguyenTo = False
+            break
+
+    return isSoNguyenTo
+
+
 # -------------------------------------------------------------
 
 
 def inDanhSachSoNguyenTo(soNhapVao):
     danhSachSoNguyenTo = []
-
+    startTime = time()
     for soCanCheck in range(0, soNhapVao + 1):
-        if (checkSoNguyenTo(soCanCheck)):
+        if (checkSoNguyenToNew(soCanCheck)):
             danhSachSoNguyenTo.append(soCanCheck)
-
+    endTime = time()
+    print('Thời gian chạy thuật toán: {0}'.format(endTime - startTime))
     return danhSachSoNguyenTo
 
 
