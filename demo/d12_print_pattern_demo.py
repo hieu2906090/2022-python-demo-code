@@ -29,7 +29,10 @@ def hamInXuoiNguoc(soDongCanIn):
     inNguoc(soTrungVi-1)
 
 
-hamInXuoiNguoc(15)
+print('Biến __name__ trong file này là: {}'.format(__name__))
+
+if __name__ == "__main__":
+    hamInXuoiNguoc(15)
 
 # inBangCuuChuong(100)
 # CC1: 1 2 3 4 5 6 7 8 9 10
