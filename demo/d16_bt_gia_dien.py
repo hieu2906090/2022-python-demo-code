@@ -119,3 +119,5 @@ bieuGia = [
 
 dsGiaDien = tinhGiaTienDienTheoBieuGia(bieuGia, userInputTemp)
 print('Danh sách giá điện theo tháng: {}'.format(dsGiaDien))
+
+'100,200,300,400,150,130'
