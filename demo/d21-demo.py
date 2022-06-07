@@ -1,17 +1,78 @@
-import d20.input_utils as input_utils
-from d20.khoang_cach_utils import duyetQuaListToaDoDeTinhKhoangCach, timSoLonNhatNhoNhatTuDanhSach
+# I. TỔ CHỨC LƯU TRỮ DỮ LIỆU
+tenBien = 'asdfasdfasdf'
+duLieuStr = 'asdfasdfasdfasdf'
+duLieuInt = 10234234234
+duLieuFloat = 10.131123123
+duLieuBoolean = True
 
-if __name__ == '__main__':
-    # I. NHẬP LIỆU DANH SÁCH KHOẢNG CÁCH VÀO
-    cauThongBao = 'Mời bạn nhập toạ độ dạng x,y'
-    listToaDo = input_utils.nhapNhieuThongTinVoiWhile(
-        cauThongBao, 1, input_utils.traThongTinTheoDSInt)
-    print('Danh sách toạ độ là: {0}'.format(listToaDo.__str__()))
 
-    # II. TÍNH TOẠ ĐỘ DỰA TRÊN DANH SÁCH ĐÃ NHẬP VÀO
-    listKhoangCach = duyetQuaListToaDoDeTinhKhoangCach(listToaDo)
-    soMin, soMax = timSoLonNhatNhoNhatTuDanhSach(listKhoangCach)
+def duLieuObject(x): return x**2
 
-    # III. IN KẾT QUẢ Ở BƯỚC II RA MÀN HÌNH
-    print('Danh sách khoảng cách điểm là {0} \n Số lớn nhất là: {2} \n Số nhỏ nhất là: {1}'.format(
-        listKhoangCach, soMin, soMax))
+
+duLieuList = [1, 's', lambda x: x**2, (1, 2), duLieuObject, [123, 321]]
+duLieuDict = {'key': duLieuList}
+
+testItem = 's'
+if (testItem in duLieuList):
+    print('Co s trong danh sach')
+# print(duLieuDict['key'])
+
+# II. CÚ PHÁP LIÊN QUAN HỖ TRỢ CHO GIẢI THUẬT
+# 1. IF
+if 10 > 2:
+    print('Dieu kien nay luon dung')
+
+if 10 > 2 and 3 > 2:
+    print('Dieu kien nay luon dung')
+
+# 1.1. OPERATOR
+
+# 1.1.2. Comparison Operators
+
+# 1.1.3. Logical Operators
+
+# 2. FOR
+for item in duLieuList:
+    # print(item)
+    pass
+
+# for item, idx in enumerate(duLieuList):
+#     print(idx, item)
+
+# for i in range(1, 10, 2):
+#     print(i)
+
+# for i in range(10, 1, -2):
+#     print(i)
+
+testDict = {'k1': 123, 'k2': 123123, 'k3': 'asdfasdf'}
+
+for (k, v) in testDict.items():
+    print(k, v)
+
+# 3. WHILE
+i = 1
+while i < 10:
+    print('con chay tiep', i)
+    i += 1
+
+while True:
+    print('con chay tiep')
+    i += 1
+    if (i == 20):
+        break
+
+# 4. FUNCTION DECLARATION
+
+
+def tenHam(tham_so1, tham_so2):
+    return tham_so1 + tham_so2
+
+
+testHam = tenHam(1, 10)
+
+print(testHam)
+
+# 5. INPUT
+userInput = input().split(',')
+print(userInput)
